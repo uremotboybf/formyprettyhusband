@@ -1,0 +1,155 @@
+:root {
+    --text: #f5f4f7;
+    --text-muted: #c2bccf;
+
+    --card: rgba(23, 20, 30, .78);
+    --border: rgba(255,255,255,.07);
+
+    --accent: #b88ba4;
+    --accent-hover: #c69cb3;
+
+    --shadow: rgba(0,0,0,.65);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+
+    font-family: "Poppins", sans-serif;
+    color: var(--text);
+
+    background:
+        linear-gradient(rgba(16,14,20,.78), rgba(16,14,20,.78)),
+        url("https://static.tumblr.com/5aa146216005f27cc92159f6975142d1/ypkv4wx/teWnu4re0/tumblr_static_tumblr_static_7a3nqhrwlp4wowkg0wwk4s0kg_focused_v3.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    width: 500px;
+    max-width: 92%;
+
+    padding: 42px;
+
+    text-align: center;
+
+    background: var(--card);
+
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+
+    border: 1px solid var(--border);
+    border-radius: 20px;
+
+    box-shadow:
+        0 24px 70px var(--shadow),
+        inset 0 1px 0 rgba(255,255,255,.03);
+}
+
+h1 {
+    margin-bottom: 18px;
+
+    font-size: 2.15rem;
+    font-weight: 600;
+    letter-spacing: .3px;
+
+    color: var(--text);
+}
+
+#message {
+    min-height: 150px;
+
+    margin: 30px 0 36px;
+
+    color: var(--text-muted);
+
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+button {
+    font: inherit;
+    font-weight: 600;
+    font-size: 15px;
+
+    padding: 14px 34px;
+
+    border: none;
+    border-radius: 12px;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #9b6d88,
+        #bc8fab
+    );
+
+    cursor: pointer;
+
+    transition:
+        background .2s ease,
+        box-shadow .2s ease,
+        filter .2s ease;
+
+    box-shadow:
+        0 8px 24px rgba(188,143,171,.22);
+}
+
+button:hover {
+    background: linear-gradient(
+        135deg,
+        #ab7b97,
+        #cfa2bb
+    );
+
+    box-shadow:
+        0 10px 28px rgba(188,143,171,.3);
+}
+
+button:active {
+    filter: brightness(.96);
+}
+
+button:disabled {
+    background: #575162;
+    color: #a59eb4;
+    box-shadow: none;
+    cursor: default;
+}
+
+::selection {
+    background: #a97f98;
+    color: white;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #15131b;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #575162;
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6d667d;
+}
